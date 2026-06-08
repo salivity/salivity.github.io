@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://sitemaps.org">
+   <sitemap>
+      <loc>https://salivity.github.io/wget/sitemap.xml</loc>
+   </sitemap>
+   <sitemap>
+      <loc>https://salivity.github.io/ffmpeg/sitemap.xml</loc>
+   </sitemap>
+   <sitemap>
+      <loc>https://salivity.github.io/htop/sitemap.xml</loc>
+   </sitemap>
+   <sitemap>
+      <loc>https://salivity.github.io/sbc/sitemap.xml</loc>
+   </sitemap>
+</sitemapindex>
