@@ -12,4 +12,17 @@
    <sitemap>
       <loc>https://salivity.github.io/sbc/sitemap.xml</loc>
    </sitemap>
+      <sitemap>
+      <loc>https://salivity.github.io/aria2/sitemap.xml</loc>
+   </sitemap>
+      <sitemap>
+      <loc>https://salivity.github.io/magick/sitemap.xml</loc>
+   </sitemap>
+
+   <sitemap>
+      <loc>https://salivity.github.io/heic-to-jpeg/sitemap.xml</loc>
+   </sitemap>
+   <sitemap>
+      <loc>https://salivity.github.io/password-generator/sitemap.xml</loc>
+   </sitemap>
 </sitemapindex>
