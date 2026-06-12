@@ -15,8 +15,11 @@
       <sitemap>
       <loc>https://salivity.github.io/aria2/sitemap.xml</loc>
    </sitemap>
-      <sitemap>
+   <sitemap>
       <loc>https://salivity.github.io/magick/sitemap.xml</loc>
+   </sitemap>
+   <sitemap>
+      <loc>https://salivity.github.io/gimp/sitemap.xml</loc>
    </sitemap>
 
    <sitemap>
