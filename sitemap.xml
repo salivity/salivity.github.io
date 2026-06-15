@@ -27,6 +27,10 @@
    <sitemap>
       <loc>https://salivity.github.io/ubuntu/sitemap.xml</loc>
    </sitemap>
+   <sitemap>
+      <loc>https://salivity.github.io/apache/sitemap.xml</loc>
+   </sitemap>
+      
 
    <sitemap>
       <loc>https://salivity.github.io/heic-to-jpeg/sitemap.xml</loc>
