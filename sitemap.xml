@@ -48,7 +48,10 @@
    <sitemap>
       <loc>https://salivity.github.io/libvpx-vp9/sitemap.xml</loc>
    </sitemap>
-
+   <sitemap>
+      <loc>https://salivity.github.io/three.js/sitemap.xml</loc>
+   </sitemap>
+      
    <sitemap>
       <loc>https://salivity.github.io/heic-to-jpeg/sitemap.xml</loc>
    </sitemap>
