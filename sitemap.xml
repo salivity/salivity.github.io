@@ -78,6 +78,18 @@
    <sitemap>
       <loc>https://salivity.github.io/game-theory/sitemap.xml</loc>
    </sitemap>  
+   <sitemap>
+      <loc>https://salivity.github.io/game-development/sitemap.xml</loc>
+   </sitemap>  
+   <sitemap>
+      <loc>https://salivity.github.io/webrtc/sitemap.xml</loc>
+   </sitemap>  
+   <sitemap>
+      <loc>https://salivity.github.io/ammo.js/sitemap.xml</loc>
+   </sitemap>  
+   <sitemap>
+      <loc>https://salivity.github.io/howler.js/sitemap.xml</loc>
+   </sitemap>  
       
    <sitemap>
       <loc>https://salivity.github.io/heic-to-jpeg/sitemap.xml</loc>
