@@ -160,4 +160,13 @@
    <sitemap>
       <loc>https://salivity.github.io/password-generator/sitemap.xml</loc>
    </sitemap>
+   <sitemap>
+      <loc>https://salivity.github.io/pixel-art-sprite-animator/sitemap.xml</loc>
+   </sitemap>
+   <sitemap>
+      <loc>https://salivity.github.io/memory-tester/sitemap.xml</loc>
+   </sitemap>
+   <sitemap>
+      <loc>https://salivity.github.io/image-color-reducer/sitemap.xml</loc>
+   </sitemap>
 </sitemapindex>
