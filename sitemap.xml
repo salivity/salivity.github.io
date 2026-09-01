@@ -196,4 +196,10 @@
    <sitemap>
       <loc>https://salivity.github.io/image-color-reducer/sitemap.xml</loc>
    </sitemap>
+   <sitemap>
+      <loc>https://salivity.github.io/css-cursor-tester/sitemap.xml</loc>
+   </sitemap>
+   <sitemap>
+      <loc>https://salivity.github.io/aspect-ratio-calculator/sitemap.xml</loc>
+   </sitemap>
 </sitemapindex>
