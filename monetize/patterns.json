@@ -18,7 +18,7 @@
     "isRegex": true
   },
   {
-    "pattern": "\\b(AI)?[ ]?TTS|Text[- ]?to[- ]?Speech|Text[- ]?to[- ]?audio|(AI)?[ ]?Voice Generat(or[s]?|ion[s]?)\\b",
+    "pattern": "( (AI)?[ ]?TTS|Text[- ]?to[- ]?Speech|Text[- ]?to[- ]?audio|(AI)?[ ]?Voice Generat(or[s]?|ion[s]?) )",
     "link": "https://textreader.app",
     "title": "Text Reader",
     "isRegex": true
