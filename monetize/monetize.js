@@ -79,7 +79,7 @@ function linkifyPatternInElement(rootElement, itemConfig) {
     {
       acceptNode(node) {
         // Skip text inside links, inputs, and non-rendering elements
-        const forbiddenTags = ['A', 'SCRIPT', 'STYLE', 'TEXTAREA', 'INPUT', 'BUTTON', 'CODE'];
+        const forbiddenTags = ['A', 'SCRIPT', 'STYLE', 'TEXTAREA', 'INPUT', 'BUTTON', 'CODE', 'PRE'];
         if (node.parentElement && forbiddenTags.includes(node.parentElement.tagName)) {
           return NodeFilter.FILTER_REJECT;
         }
