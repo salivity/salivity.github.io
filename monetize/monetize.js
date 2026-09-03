@@ -55,7 +55,7 @@ function buildRegex({ pattern, isRegex = false, flags = 'gi', exactBoundary = tr
 
 /**
  * Traverses text nodes within an element and replaces matches with anchor tags.
- * Ignores text nodes already inside <a>, <script>, <style>, etc.
+ * Ignores text nodes already inside <a>, <script>, <style>, <pre>, <code>, etc.
  */
 function linkifyPatternInElement(rootElement, itemConfig) {
   const { 
@@ -73,14 +73,16 @@ function linkifyPatternInElement(rootElement, itemConfig) {
     return;
   }
 
+  // Selector matching all forbidden ancestor containers
+  const forbiddenSelector = 'a, script, style, textarea, input, button, code, pre';
+
   const walker = document.createTreeWalker(
     rootElement,
     NodeFilter.SHOW_TEXT,
     {
       acceptNode(node) {
-        // Skip text inside links, inputs, and non-rendering elements
-        const forbiddenTags = ['A', 'SCRIPT', 'STYLE', 'TEXTAREA', 'INPUT', 'BUTTON', 'CODE', 'PRE'];
-        if (node.parentElement && forbiddenTags.includes(node.parentElement.tagName)) {
+        // Traverses up the DOM tree to check if this node sits inside any forbidden tag
+        if (node.parentElement && node.parentElement.closest(forbiddenSelector)) {
           return NodeFilter.FILTER_REJECT;
         }
         return NodeFilter.FILTER_ACCEPT;
@@ -109,7 +111,7 @@ function linkifyPatternInElement(rootElement, itemConfig) {
     let match;
 
     while ((match = regex.exec(text)) !== null) {
-      // Prevent infinite loops on zero-length matches (e.g. regexes like /(?=...)/)
+      // Prevent infinite loops on zero-length matches
       if (match.index === regex.lastIndex) {
         regex.lastIndex++;
         continue;
