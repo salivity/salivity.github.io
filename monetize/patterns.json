@@ -12,7 +12,7 @@
     "isRegex": true
   },
   {
-    "pattern": "(WebP[ ]?(Convert(er[s]?|ing)?|conversions))|((convert|image|jpeg|jpg|png|gif|avif|webp)?[ ]?to[ -]+webp)",
+    "pattern": "\\b((WebP[ ]?(Convert(er[s]?|ing)?|conversion[s]?))|((convert|image|jpeg|jpg|png|gif|avif|webp)?[ ]?to[ -]+webp))\\b",
     "link": "https://webpconverter.app",
     "title": "WebP Converter",
     "isRegex": true
