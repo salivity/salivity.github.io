@@ -1,6 +1,6 @@
 [
   {
-    "pattern": "\bData[ ]?URL[s]?\b",
+    "pattern": "^Data[ ]?URL[s]?$",
     "link": "https://dataurl.link",
     "title": "Data URL Generator"
   }
