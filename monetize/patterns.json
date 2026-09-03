@@ -12,61 +12,67 @@
     "isRegex": true
   },
   {
-    "pattern": "\\b(wmv[- ]{1}[- ]{1}to[- ]{1}webm)\\b",
+    "pattern": "\\b(wmv[- ]{1}to[- ]{1}webm)\\b",
     "link": "https://webmconverter.app/wmv-to-webm",
     "title": "WMV to WebM Converter",
     "isRegex": true
   },
     {
-    "pattern": "\\b(avi[- ]{1}[- ]{1}to[- ]{1}webm)\\b",
+    "pattern": "\\b(avi[- ]{1}to[- ]{1}webm)\\b",
     "link": "https://webmconverter.app/avi-to-webm",
     "title": "AVI to WebM Converter",
     "isRegex": true
   },
   {
-    "pattern": "\\b(flv[- ]{1}[- ]{1}to[- ]{1}webm)\\b",
+    "pattern": "\\b(flv[- ]{1}to[- ]{1}webm)\\b",
     "link": "https://webmconverter.app/flv-to-webm",
     "title": "FLV to WebM Converter",
     "isRegex": true
   },
   {
-    "pattern": "\\b(mkv[- ]{1}[- ]{1}to[- ]{1}webm)\\b",
+    "pattern": "\\b(gif[- ]{1}to[- ]{1}webm)\\b",
+    "link": "https://webmconverter.app/gif-to-webm",
+    "title": "GIF to WebM Converter",
+    "isRegex": true
+  },
+  {
+    "pattern": "\\b(mkv[- ]{1}to[- ]{1}webm)\\b",
     "link": "https://webmconverter.app/mkv-to-webm",
     "title": "MKV to WebM Converter",
     "isRegex": true
   },
   {
-    "pattern": "\\b(mov[- ]{1}[- ]{1}to[- ]{1}webm)\\b",
+    "pattern": "\\b(mov[- ]{1}to[- ]{1}webm)\\b",
     "link": "https://webmconverter.app/wmv-to-webm",
     "title": "WMV to WebM Converter",
     "isRegex": true
   },
   {
-    "pattern": "\\b(wmv[- ]{1}[- ]{1}to[- ]{1}webm)\\b",
+    "pattern": "\\b(wmv[- ]{1}to[- ]{1}webm)\\b",
     "link": "https://webmconverter.app/mov-to-webm",
     "title": "MOV to WebM Converter",
     "isRegex": true
   },
   {
-    "pattern": "\\b((mp4|mpeg[-]?4)[- ]{1}[- ]{1}to[- ]{1}webm)\\b",
+    "pattern": "\\b((mp4|mpeg[-]?4)[- ]{1}to[- ]{1}webm)\\b",
     "link": "https://webmconverter.app/mp4-to-webm",
     "title": "MP4 to WebM Converter",
     "isRegex": true
   },
   {
-    "pattern": "\\b(webm[- ]{1}[- ]{1}to[- ]{1}webm)\\b",
+    "pattern": "\\b(webm[- ]{1}to[- ]{1}webm)\\b",
     "link": "https://webmconverter.app/webm-to-webm",
     "title": "WebM to WebM Converter",
     "isRegex": true
   },
   {
-    "pattern": "\\b(vob[- ]{1}[- ]{1}to[- ]{1}webm)\\b",
+    "pattern": "\\b(vob[- ]{1}to[- ]{1}webm)\\b",
     "link": "https://webmconverter.app/vob-to-webm",
     "title": "VOB to WebM Converter",
     "isRegex": true
   },
   {
-    "pattern": "\\b(apng[- ]{1}[- ]{1}to[- ]{1}webm)\\b",
+    "pattern": "\\b(apng[- ]{1}to[- ]{1}webm)\\b",
     "link": "https://webmconverter.app/apng-to-webm",
     "title": "APNG to WebM Converter",
     "isRegex": true
