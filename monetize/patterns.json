@@ -2,6 +2,7 @@
   {
     "pattern": "^Data[ ]?URL[s]?$",
     "link": "https://dataurl.link",
-    "title": "Data URL Generator"
+    "title": "Data URL Generator",
+    "isRegex": true,
   }
 ]
