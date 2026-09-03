@@ -37,10 +37,9 @@ async function autoLinkArticles(jsonPath) {
  * Ignores text nodes already inside <a>, <script>, <style>, etc.
  */
 function linkifyPatternInElement(rootElement, { pattern, link, title }) {
-  // Escape special regex characters in case the pattern contains '.', '*', etc.
-  const escapedPattern = pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  // Match the pattern globally with word boundaries (\b) and case-insensitivity ('gi')
-  const regex = new RegExp(`\\b(${escapedPattern})\\b`, 'gi');
+
+  // Match the pattern globally and case-insensitive
+  const regex = new RegExp(pattern, 'gi');
 
   const walker = document.createTreeWalker(
     rootElement,
