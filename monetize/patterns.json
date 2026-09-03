@@ -3,6 +3,6 @@
     "pattern": "^Data[ ]?URL[s]?$",
     "link": "https://dataurl.link",
     "title": "Data URL Generator",
-    "isRegex": true,
+    "isRegex": true
   }
 ]
