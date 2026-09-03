@@ -62,7 +62,7 @@ function linkifyPatternInElement(rootElement, itemConfig) {
     link, 
     title, 
     target = '_blank', 
-    rel = 'noopener noreferrer' 
+    rel = undefined 
   } = itemConfig;
 
   let regex;
@@ -73,7 +73,6 @@ function linkifyPatternInElement(rootElement, itemConfig) {
     return;
   }
 
-  // Selector matching all forbidden ancestor containers
   const forbiddenSelector = 'a, script, style, textarea, input, button, code, pre';
 
   const walker = document.createTreeWalker(
@@ -81,7 +80,6 @@ function linkifyPatternInElement(rootElement, itemConfig) {
     NodeFilter.SHOW_TEXT,
     {
       acceptNode(node) {
-        // Traverses up the DOM tree to check if this node sits inside any forbidden tag
         if (node.parentElement && node.parentElement.closest(forbiddenSelector)) {
           return NodeFilter.FILTER_REJECT;
         }
@@ -94,7 +92,6 @@ function linkifyPatternInElement(rootElement, itemConfig) {
   let currentNode = walker.nextNode();
 
   while (currentNode) {
-    // Reset regex index before test
     regex.lastIndex = 0;
     if (regex.test(currentNode.nodeValue)) {
       nodesToReplace.push(currentNode);
@@ -111,38 +108,56 @@ function linkifyPatternInElement(rootElement, itemConfig) {
     let match;
 
     while ((match = regex.exec(text)) !== null) {
-      // Prevent infinite loops on zero-length matches
       if (match.index === regex.lastIndex) {
         regex.lastIndex++;
         continue;
       }
 
-      // Append plain text before match
-      if (match.index > lastIndex) {
-        fragment.appendChild(
-          document.createTextNode(text.slice(lastIndex, match.index))
-        );
+      // 1. Slice preceding text
+      let prefixText = text.slice(lastIndex, match.index);
+
+      // Ensure a space exists before the anchor tag
+      if (prefixText.length > 0) {
+        if (!/\s$/.test(prefixText)) {
+          prefixText += ' ';
+        }
+      } else if (lastIndex === 0 && textNode.previousSibling) {
+        // Handle boundary if this match is at the very beginning of the text node
+        fragment.appendChild(document.createTextNode(' '));
       }
 
-      // Create anchor element
+      if (prefixText) {
+        fragment.appendChild(document.createTextNode(prefixText));
+      }
+
+      // 2. Build the anchor element (trimming in case the regex captured whitespace)
       const anchor = document.createElement('a');
       anchor.href = link;
       if (target) anchor.target = target;
       if (rel) anchor.rel = rel;
       if (title) anchor.title = title;
-
-      // Preserve matched text
-      anchor.textContent = match[0];
+      anchor.textContent = match[0].trim();
 
       fragment.appendChild(anchor);
+
+      // 3. Ensure a space exists after the anchor tag
+      const remainingSlice = text.slice(regex.lastIndex);
+      if (remainingSlice.length > 0) {
+        // If the immediate next character is not whitespace, prepend a space
+        if (!/^\s/.test(remainingSlice)) {
+          fragment.appendChild(document.createTextNode(' '));
+        }
+      } else if (!textNode.nextSibling) {
+        // Optional: appends trailing space if at end of text node
+        fragment.appendChild(document.createTextNode(' '));
+      }
+
       lastIndex = regex.lastIndex;
     }
 
-    // Append any trailing plain text
+    // Append any trailing text after the last match
     if (lastIndex < text.length) {
-      fragment.appendChild(
-        document.createTextNode(text.slice(lastIndex))
-      );
+      fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
     }
 
     if (textNode.parentNode) {
