@@ -48,7 +48,7 @@ function linkifyPatternInElement(rootElement, { pattern, link, title }) {
     {
       acceptNode(node) {
         // Skip text nodes already nested within links or non-display elements
-        const forbiddenTags = ['A', 'SCRIPT', 'STYLE', 'TEXTAREA', 'INPUT'];
+        const forbiddenTags = ['A', 'SCRIPT', 'STYLE', 'TEXTAREA', 'INPUT', 'CODE' ,'PRE'];
         if (node.parentElement && forbiddenTags.includes(node.parentElement.tagName)) {
           return NodeFilter.FILTER_REJECT;
         }
