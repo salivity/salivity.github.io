@@ -211,4 +211,7 @@
    <sitemap>
       <loc>https://salivity.github.io/image-to-ascii-converter/sitemap.xml</loc>
    </sitemap>
+   <sitemap>
+      <loc>https://salivity.github.io/css-3d-cube-animator/sitemap.xml</loc>
+   </sitemap>
 </sitemapindex>
