@@ -1,8 +1,5 @@
 /**
  * salivity.github.io - Monetize Script
- *
- * All these projects have been created by the owner of salivity.github.io and are 
- * relevant to the text they are injected into through pattern matching.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Loads replacement configurations from a JSON file and links matching terms
- * inside all <article> elements on the page.
+ * Loads replacement configurations and links matching terms inside <article> elements.
  * @param {string} jsonPath - URL/path to the patterns JSON file.
  */
 async function autoLinkArticles(jsonPath) {
@@ -23,18 +19,25 @@ async function autoLinkArticles(jsonPath) {
     const configs = await response.json();
     const articles = document.querySelectorAll('article');
 
-    // Filter out invalid items and sort longer/more specific patterns first
-    const prioritizedConfigs = [...configs]
+    // Build individual compiled regular expressions for every config
+    const compiledRules = configs
       .filter((item) => item && item.pattern)
-      .sort((a, b) => (b.pattern.length || 0) - (a.pattern.length || 0));
+      .map((config) => {
+        let patternSource = config.pattern;
+        if (!config.isRegex) {
+          const escaped = config.pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          patternSource = config.exactBoundary !== false ? `\\b${escaped}\\b` : escaped;
+        }
+        return {
+          ...config,
+          regex: new RegExp(patternSource, 'gi')
+        };
+      });
 
-    if (prioritizedConfigs.length === 0) return;
-
-    // Build the combined master regex mapping capture groups to their respective configs
-    const { combinedRegex, groupToConfigMap } = buildCombinedRegex(prioritizedConfigs);
+    if (compiledRules.length === 0) return;
 
     articles.forEach((article) => {
-      linkifyElementWithCombinedRegex(article, combinedRegex, groupToConfigMap);
+      linkifyElement(article, compiledRules);
     });
   } catch (error) {
     console.error('Failed to link patterns:', error);
@@ -42,38 +45,10 @@ async function autoLinkArticles(jsonPath) {
 }
 
 /**
- * Combines all individual pattern rules into a single regular expression with capture groups.
- * Every pattern is evaluated in the same pass.
+ * Traverses text nodes within an element and links occurrences using all rules.
+ * Automatically handles conflicts by choosing the longest/earliest match.
  */
-function buildCombinedRegex(configs) {
-  const groupToConfigMap = [];
-  const patternParts = [];
-
-  configs.forEach((config) => {
-    const { pattern, isRegex = false, exactBoundary = true } = config;
-    let source;
-
-    if (isRegex) {
-      source = pattern;
-    } else {
-      const escaped = pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      source = exactBoundary ? `\\b${escaped}\\b` : escaped;
-    }
-
-    // Wrap each in an outer capturing group
-    patternParts.push(`(${source})`);
-    groupToConfigMap.push(config);
-  });
-
-  const combinedRegex = new RegExp(patternParts.join('|'), 'gi');
-  return { combinedRegex, groupToConfigMap };
-}
-
-/**
- * Traverses text nodes within an element and replaces matches with anchor tags.
- * Ignores text nodes already inside <a>, <script>, <style>, <pre>, <code>, etc.
- */
-function linkifyElementWithCombinedRegex(rootElement, combinedRegex, groupToConfigMap) {
+function linkifyElement(rootElement, compiledRules) {
   const forbiddenSelector = 'a, script, style, textarea, input, button, code, pre';
 
   const walker = document.createTreeWalker(
@@ -98,55 +73,71 @@ function linkifyElementWithCombinedRegex(rootElement, combinedRegex, groupToConf
 
   textNodes.forEach((textNode) => {
     const text = textNode.nodeValue;
-    combinedRegex.lastIndex = 0;
+    if (!text || !text.trim()) return;
 
-    // Check if node contains any match before DOM manipulation
-    if (!combinedRegex.test(text)) return;
+    // Collect all potential matches from all patterns
+    const matches = [];
 
-    combinedRegex.lastIndex = 0;
-    const fragment = document.createDocumentFragment();
-    let lastIndex = 0;
-    let match;
-
-    while ((match = combinedRegex.exec(text)) !== null) {
-      if (match.index === combinedRegex.lastIndex) {
-        combinedRegex.lastIndex++;
-        continue;
-      }
-
-      // Identify which pattern captured the match
-      // match[0] is the full match, match[1..n] are the respective capture groups
-      let matchedConfig = null;
-      for (let i = 1; i < match.length; i++) {
-        if (match[i] !== undefined) {
-          matchedConfig = groupToConfigMap[i - 1];
-          break;
+    compiledRules.forEach((rule) => {
+      rule.regex.lastIndex = 0;
+      let m;
+      while ((m = rule.regex.exec(text)) !== null) {
+        if (m[0].length === 0) {
+          rule.regex.lastIndex++;
+          continue;
         }
+        matches.push({
+          start: m.index,
+          end: m.index + m[0].length,
+          text: m[0],
+          rule: rule
+        });
       }
+    });
 
-      if (!matchedConfig) continue;
+    if (matches.length === 0) return;
 
-      // Append preceding plain text
-      const prefixText = text.slice(lastIndex, match.index);
-      if (prefixText.length > 0) {
-        fragment.appendChild(document.createTextNode(prefixText));
+    // Sort matches:
+    // 1. Earliest appearance first (start ascending)
+    // 2. Longest matched phrase first (length descending)
+    matches.sort((a, b) => a.start - b.start || (b.end - b.start) - (a.end - a.start));
+
+    // Filter out overlapping matches (keep the earliest/longest)
+    const nonOverlappingMatches = [];
+    let lastMatchedIndex = 0;
+
+    for (const match of matches) {
+      if (match.start >= lastMatchedIndex) {
+        nonOverlappingMatches.push(match);
+        lastMatchedIndex = match.end;
       }
-
-      // Build target anchor tag
-      const anchor = document.createElement('a');
-      anchor.href = matchedConfig.link;
-      if (matchedConfig.target) anchor.target = matchedConfig.target;
-      if (matchedConfig.rel) anchor.rel = matchedConfig.rel;
-      if (matchedConfig.title) anchor.title = matchedConfig.title;
-      anchor.textContent = match[0];
-
-      fragment.appendChild(anchor);
-      lastIndex = combinedRegex.lastIndex;
     }
 
-    // Append remainder text
-    if (lastIndex < text.length) {
-      fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
+    // Build the fragment with text and replacement <a> nodes
+    const fragment = document.createDocumentFragment();
+    let cursor = 0;
+
+    nonOverlappingMatches.forEach((match) => {
+      // Append preceding plain text
+      if (match.start > cursor) {
+        fragment.appendChild(document.createTextNode(text.slice(cursor, match.start)));
+      }
+
+      // Create target anchor tag
+      const anchor = document.createElement('a');
+      anchor.href = match.rule.link;
+      if (match.rule.target) anchor.target = match.rule.target;
+      if (match.rule.rel) anchor.rel = match.rule.rel;
+      if (match.rule.title) anchor.title = match.rule.title;
+      anchor.textContent = match.text;
+
+      fragment.appendChild(anchor);
+      cursor = match.end;
+    });
+
+    // Append any trailing plain text
+    if (cursor < text.length) {
+      fragment.appendChild(document.createTextNode(text.slice(cursor)));
     }
 
     if (textNode.parentNode) {
