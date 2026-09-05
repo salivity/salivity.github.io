@@ -84,6 +84,12 @@
     "isRegex": true
   },
   {
+    "pattern": "\\b(mass|bulk|batch)[- ]?convert[- ]{1}(images[- ]{1})?(to[- ]{1})?webp\\b",
+    "link": "https://webpconverter.app",
+    "title": "Bulk WebP Converter",
+    "isRegex": true
+  },
+  {
     "pattern": "\\b((modify|adjust|change|alter|tweak)[- ]{1})?webp[- ]brightness\\b",
     "link": "https://webpconverter.app/brightness",
     "title": "Adjust WebP Brightness",
