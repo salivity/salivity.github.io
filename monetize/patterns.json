@@ -78,7 +78,7 @@
     "isRegex": true
   },
   {
-    "pattern": "\\b((WebP[ ]?(Convert(er[s]?|ing)?|conversion[s]?))|((convert|image|jpeg|jpg|png|gif|avif|webp)?[ ]?to[-\\s]+webp))\\b",
+    "pattern": "\\b((WebP[\\s]?(Convert(er[s]?|ing)?|conversion[s]?))|((convert|image|jpeg|jpg|png|gif|avif|webp)?[\\s]?to[-\\s]+webp))\\b",
     "link": "https://webpconverter.app",
     "title": "WebP Converter",
     "isRegex": true
@@ -231,7 +231,7 @@
 
   
   {
-    "pattern": "\\b((AI)?[ ]?TTS|Text[-\\s]?to[-\\s]?Speech|Text[-\\s]?to[-\\s]?audio|(AI)?[ ]?Voice Generat(or[s]?|ion[s]?))\\b",
+    "pattern": "\\b((AI)?[\\s]?TTS|Text[-\\s]?to[-\\s]?Speech|Text[-\\s]?to[-\\s]?audio|(AI)?[\\s]?Voice Generat(or[s]?|ion[s]?))\\b",
     "link": "https://textreader.app",
     "title": "Text Reader",
     "isRegex": true
