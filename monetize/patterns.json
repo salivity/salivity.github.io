@@ -592,6 +592,12 @@
     "title": "Image Downloader",
     "isRegex": true
   },
+  {
+    "pattern": "\\b(((bulk|batch|automatic|automated)[-\\s])?((url|link)[-\\s]open(er)?)|(open[-\\s]multiple[-\\s]((url|link)[s])))\\b",
+    "link": "https://urlopener.link",
+    "title": "URL Opener",
+    "isRegex": true
+  },
   
   {
     "pattern": "\\b((AI)?[\\s]?TTS|Text[-\\s]?to[-\\s]?Speech|Text[-\\s]?to[-\\s]?audio|(AI)?[\\s]?Voice Generat(or[s]?|ion[s]?))\\b",
