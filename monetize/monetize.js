@@ -23,18 +23,18 @@ async function autoLinkArticles(jsonPath) {
     const configs = await response.json();
     const articles = document.querySelectorAll('article');
 
-    // Sort patterns by length descending so longer/more specific patterns
-    // claim text before shorter subsets can
-    const prioritizedConfigs = [...configs].sort((a, b) => {
-      const lenA = (a.pattern || '').length;
-      const lenB = (b.pattern || '').length;
-      return lenB - lenA;
-    });
+    // Filter out invalid items and sort longer/more specific patterns first
+    const prioritizedConfigs = [...configs]
+      .filter((item) => item && item.pattern)
+      .sort((a, b) => (b.pattern.length || 0) - (a.pattern.length || 0));
+
+    if (prioritizedConfigs.length === 0) return;
+
+    // Build the combined master regex mapping capture groups to their respective configs
+    const { combinedRegex, groupToConfigMap } = buildCombinedRegex(prioritizedConfigs);
 
     articles.forEach((article) => {
-      prioritizedConfigs.forEach((item) => {
-        linkifyPatternInElement(article, item);
-      });
+      linkifyElementWithCombinedRegex(article, combinedRegex, groupToConfigMap);
     });
   } catch (error) {
     console.error('Failed to link patterns:', error);
@@ -42,47 +42,40 @@ async function autoLinkArticles(jsonPath) {
 }
 
 /**
- * Builds a RegExp instance based on the pattern configuration.
- * @param {Object} config - Pattern configuration.
- * @returns {RegExp}
+ * Combines all individual pattern rules into a single regular expression with capture groups.
+ * Every pattern is evaluated in the same pass.
  */
-function buildRegex({ pattern, isRegex = false, flags = 'gi', exactBoundary = true }) {
-  const safeFlags = flags.includes('g') ? flags : `${flags}g`;
+function buildCombinedRegex(configs) {
+  const groupToConfigMap = [];
+  const patternParts = [];
 
-  if (isRegex) {
-    return new RegExp(pattern, safeFlags);
-  }
+  configs.forEach((config) => {
+    const { pattern, isRegex = false, exactBoundary = true } = config;
+    let source;
 
-  // Fallback: literal string escaping with optional word boundaries
-  const escaped = pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const source = exactBoundary ? `\\b(${escaped})\\b` : `(${escaped})`;
+    if (isRegex) {
+      source = pattern;
+    } else {
+      const escaped = pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      source = exactBoundary ? `\\b${escaped}\\b` : escaped;
+    }
 
-  return new RegExp(source, safeFlags);
+    // Wrap each in an outer capturing group
+    patternParts.push(`(${source})`);
+    groupToConfigMap.push(config);
+  });
+
+  const combinedRegex = new RegExp(patternParts.join('|'), 'gi');
+  return { combinedRegex, groupToConfigMap };
 }
 
 /**
  * Traverses text nodes within an element and replaces matches with anchor tags.
  * Ignores text nodes already inside <a>, <script>, <style>, <pre>, <code>, etc.
  */
-function linkifyPatternInElement(rootElement, itemConfig) {
-  const { 
-    link, 
-    title, 
-    target = '_blank', 
-    rel = undefined 
-  } = itemConfig;
-
-  let regex;
-  try {
-    regex = buildRegex(itemConfig);
-  } catch (e) {
-    console.error(`Invalid regex pattern: "${itemConfig.pattern}"`, e);
-    return;
-  }
-
+function linkifyElementWithCombinedRegex(rootElement, combinedRegex, groupToConfigMap) {
   const forbiddenSelector = 'a, script, style, textarea, input, button, code, pre';
 
-  // Fresh TreeWalker for each pattern to discover only remaining raw text nodes
   const walker = document.createTreeWalker(
     rootElement,
     NodeFilter.SHOW_TEXT,
@@ -96,51 +89,62 @@ function linkifyPatternInElement(rootElement, itemConfig) {
     }
   );
 
-  const nodesToReplace = [];
+  const textNodes = [];
   let currentNode = walker.nextNode();
-
   while (currentNode) {
-    regex.lastIndex = 0;
-    if (regex.test(currentNode.nodeValue)) {
-      nodesToReplace.push(currentNode);
-    }
+    textNodes.push(currentNode);
     currentNode = walker.nextNode();
   }
 
-  nodesToReplace.forEach((textNode) => {
+  textNodes.forEach((textNode) => {
     const text = textNode.nodeValue;
+    combinedRegex.lastIndex = 0;
+
+    // Check if node contains any match before DOM manipulation
+    if (!combinedRegex.test(text)) return;
+
+    combinedRegex.lastIndex = 0;
     const fragment = document.createDocumentFragment();
     let lastIndex = 0;
-
-    regex.lastIndex = 0;
     let match;
 
-    while ((match = regex.exec(text)) !== null) {
-      if (match.index === regex.lastIndex) {
-        regex.lastIndex++;
+    while ((match = combinedRegex.exec(text)) !== null) {
+      if (match.index === combinedRegex.lastIndex) {
+        combinedRegex.lastIndex++;
         continue;
       }
 
-      // 1. Append preceding text unchanged
+      // Identify which pattern captured the match
+      // match[0] is the full match, match[1..n] are the respective capture groups
+      let matchedConfig = null;
+      for (let i = 1; i < match.length; i++) {
+        if (match[i] !== undefined) {
+          matchedConfig = groupToConfigMap[i - 1];
+          break;
+        }
+      }
+
+      if (!matchedConfig) continue;
+
+      // Append preceding plain text
       const prefixText = text.slice(lastIndex, match.index);
       if (prefixText.length > 0) {
         fragment.appendChild(document.createTextNode(prefixText));
       }
 
-      // 2. Build the anchor element
+      // Build target anchor tag
       const anchor = document.createElement('a');
-      anchor.href = link;
-      if (target) anchor.target = target;
-      if (rel) anchor.rel = rel;
-      if (title) anchor.title = title;
+      anchor.href = matchedConfig.link;
+      if (matchedConfig.target) anchor.target = matchedConfig.target;
+      if (matchedConfig.rel) anchor.rel = matchedConfig.rel;
+      if (matchedConfig.title) anchor.title = matchedConfig.title;
       anchor.textContent = match[0];
 
       fragment.appendChild(anchor);
-
-      lastIndex = regex.lastIndex;
+      lastIndex = combinedRegex.lastIndex;
     }
 
-    // 3. Append remaining text after the final match
+    // Append remainder text
     if (lastIndex < text.length) {
       fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
     }
