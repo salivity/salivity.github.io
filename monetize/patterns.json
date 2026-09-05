@@ -435,7 +435,7 @@
     "isRegex": true
   },
   {
-    "pattern": "\\b((AVIF[\\s]?(Convert(er[s]?|ing)?|conversion[s]?))|((convert|image|jpeg|jpg|avif|gif|avif|avif)?[\\s]?to[-\\s]+avif))\\b",
+    "pattern": "\\b((AVIF[\\s]?(Convert(er[s]?|ing)?|conversion[s]?))|((convert(ing)?|image[s]?|jpeg|jpg|avif|gif|avif|avif)?[\\s]?to[-\\s]+avif))\\b",
     "link": "https://avifconverter.app",
     "title": "AVIF Converter",
     "isRegex": true
