@@ -84,6 +84,147 @@
     "isRegex": true
   },
   {
+    "pattern": "\\b((modify|adjust|change|alter|tweak)[- ]{1})?webp[- ]brightness\\b",
+    "link": "https://webpconverter.app/brightness",
+    "title": "Adjust WebP Brightness",
+    "isRegex": true
+  },
+  {
+  	"pattern": "\\b((modify|adjust|change|alter|tweak)[- ]{1})?webp[- ]contrast\\b",
+  	"link": "https://webpconverter.app/contrast",
+  	"title": "Adjust WebP Contrast",
+  	"isRegex": true
+  },
+  {
+  	"pattern": "\\b((modify|adjust|change|alter|tweak)[- ]{1})?webp[- ]gamma\\b",
+  	"link": "https://webpconverter.app/gamma",
+  	"title": "Adjust WebP Brightness",
+  	"isRegex": true
+  },
+  {
+  	"pattern": "\\b((modify|adjust|change|alter|tweak)[- ]{1})?webp[- ]hue\\b",
+  	"link": "https://webpconverter.app/hue",
+  	"title": "Adjust WebP Hue",
+  	"isRegex": true
+  },
+  {
+  	"pattern": "\\b((modify|adjust|change|alter|tweak)[- ]{1})?webp[- ]saturation\\b",
+  	"link": "https://webpconverter.app/saturation",
+  	"title": "Adjust WebP Saturation",
+  	"isRegex": true
+  },
+  
+  
+  {
+  	"pattern": "\\b((apply)[- ]{1})?gaussian[- ]{1}blur[- ]{1}(to[- ]{1})?webp\\b",
+  	"link": "https://webpconverter.app/gaussian-blur",
+  	"title": "Apply Gaussian Blur to WebP",
+  	"isRegex": true
+  },
+  {
+  	"pattern": "\\b((apply)[- ]{1})?gr[ae]{1}y[- ]?scale[- ]{1}filter[- ]{1}(to[- ]{1})?webp\\b",
+  	"link": "https://webpconverter.app/grayscale",
+  	"title": "Apply Grayscale Filter to WebP",
+  	"isRegex": true
+  },
+  
+  {
+  	"pattern": "\\b((apply)[- ]{1})?mirror[- ]{1}filter[- ]{1}(to[- ]{1})?webp\\b",
+  	"link": "https://webpconverter.app/mirror",
+  	"title": "Apply Mirror Filter to WebP",
+  	"isRegex": true
+  },
+  
+  {
+  	"pattern": "\\b((apply)[- ]{1})?(negate|invert)[- ]{1}filter[- ]{1}(to[- ]{1})?webp\\b",
+  	"link": "https://webpconverter.app/negate",
+  	"title": "Apply Negate Filter to WebP",
+  	"isRegex": true
+  },
+  
+  {
+  	"pattern": "\\b((apply)[- ]{1})?normalize[- ]{1}filter[- ]{1}(to[- ]{1})?webp\\b",
+  	"link": "https://webpconverter.app/normalize",
+  	"title": "Apply Normalize Filter to WebP",
+  	"isRegex": true
+  },
+  
+  {
+  	"pattern": "\\b(resize|upscale|downscale)[- ]{1}webp([- ]image[s]?)?\\b",
+  	"link": "https://webpconverter.app/resize",
+  	"title": "Resize WebP Images",
+  	"isRegex": true
+  },
+  
+  {
+  	"pattern": "\\b((apply)[- ]{1})?sepia[- ]{1}(filter[- ]{1})?(to[- ]{1})?webp\\b",
+  	"link": "https://webpconverter.app/sepia",
+  	"title": "Apply Sepia Filter to WebP",
+  	"isRegex": true
+  },
+  
+  {
+  	"pattern": "\\b((apply)[- ]{1})?sharpen[- ]{1}(filter[- ]{1})?(to[- ]{1})?webp\\b",
+  	"link": "https://webpconverter.app/sharpen",
+  	"title": "Apply Sharpen Filter to WebP",
+  	"isRegex": true
+  },
+  
+  {
+  	"pattern": "\\b((apply)[- ]{1})?watermark[- ]{1}(filter[- ]{1})?(to[- ]{1})?webp\\b",
+  	"link": "https://webpconverter.app/watermark",
+  	"title": "Apply Watermark to WebP",
+  	"isRegex": true
+  },
+  
+  {
+  	"pattern": "\\b((apply)[- ]{1})?oil[- ]?paint[- ]{1}(filter[- ]{1})?(to[- ]{1})?webp\\b",
+  	"link": "https://webpconverter.app/oil-paint",
+  	"title": "Apply Oil Paint Filter to WebP",
+  	"isRegex": true
+  },
+  
+  {
+  	"pattern": "\\b((apply)[- ]{1})?vignette[- ]{1}(filter[- ]{1})?(to[- ]{1})?webp\\b",
+  	"link": "https://webpconverter.app/vignette",
+  	"title": "Apply Vignette Filter to WebP",
+  	"isRegex": true
+  },
+  
+  {
+  	"pattern": "\\b((apply)[- ]{1})?solarize[- ]{1}(filter[- ]{1})?(to[- ]{1})?webp\\b",
+  	"link": "https://webpconverter.app/solarize",
+  	"title": "Apply Solarize Filter to WebP",
+  	"isRegex": true
+  },
+  {
+  	"pattern": "\\b((apply)[- ]{1})?wave[- ]{1}(filter[- ]{1})?(to[- ]{1})?webp\\b",
+  	"link": "https://webpconverter.app/wave",
+  	"title": "Apply Wave Filter to WebP",
+  	"isRegex": true
+  },
+  
+  {
+  	"pattern": "\\b((apply)[- ]{1})?threshold[- ]{1}(filter[- ]{1})?(to[- ]{1})?webp\\b",
+  	"link": "https://webpconverter.app/threshold",
+  	"title": "Apply Threshold Filter to WebP",
+  	"isRegex": true
+  },
+  {
+  	"pattern": "\\b((apply)[- ]{1})?trim[- ]{1}(filter[- ]{1})?(to[- ]{1})?webp\\b",
+  	"link": "https://webpconverter.app/trim",
+  	"title": "Apply Trim Filter to WebP",
+  	"isRegex": true
+  },
+  {
+  	"pattern": "\\b((apply)[- ]{1})?rotate[- ]{1}(filter[- ]{1})?(to[- ]{1})?webp\\b",
+  	"link": "https://webpconverter.app/rotate",
+  	"title": "Apply Rotate Filter to WebP",
+  	"isRegex": true
+  },
+
+  
+  {
     "pattern": "\\b((AI)?[ ]?TTS|Text[- ]?to[- ]?Speech|Text[- ]?to[- ]?audio|(AI)?[ ]?Voice Generat(or[s]?|ion[s]?))\\b",
     "link": "https://textreader.app",
     "title": "Text Reader",
