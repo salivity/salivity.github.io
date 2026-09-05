@@ -1,5 +1,7 @@
 /**
  * salivity.github.io - Monetize Script
+ *
+ * All the services are owned by the developer of salivity.github.io
  */
 
 document.addEventListener('DOMContentLoaded', () => {
