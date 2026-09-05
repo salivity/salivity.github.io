@@ -122,7 +122,7 @@
   
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?gaussian[-\\s]{1}blur[-\\s]{1}((to[-\s])?(to|the|a|an)[-\\s]{1})?webp\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?gaussian[-\\s]{1}blur[-\\s]{1}(to[-\\s])?((to|the|a|an)[-\\s]{1})?webp\\b",
   	"link": "https://webpconverter.app/gaussian-blur",
   	"title": "Apply Gaussian Blur to WebP",
   	"isRegex": true
@@ -273,7 +273,7 @@
   
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?gaussian[-\\s]{1}blur[-\\s]{1}((to[-\s])?(to|the|a|an)[-\\s]{1})?png\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?gaussian[-\\s]{1}blur[-\\s]{1}(to[-\\s])?((to|the|a|an)[-\\s]{1})?png\\b",
   	"link": "https://pngconverter.app/gaussian-blur",
   	"title": "Apply Gaussian Blur to PNG",
   	"isRegex": true
