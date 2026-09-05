@@ -84,7 +84,7 @@
     "isRegex": true
   },
   {
-    "pattern": "\\b(mass|bulk|batch)[- ]?convert[- ]{1}(images[- ]{1})?(to[- ]{1})?webp\\b",
+    "pattern": "\\b(mass|bulk|batch)[- ]?convert[- ]{1}(image[s]?[- ]{1})?(to[- ]{1})?webp\\b",
     "link": "https://webpconverter.app",
     "title": "Bulk WebP Converter",
     "isRegex": true
