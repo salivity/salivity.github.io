@@ -90,31 +90,31 @@
     "isRegex": true
   },
   {
-  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?((the[-\\s]{1}brightness[-\\s]{1}of[-\\s]{1}a[-\\s]{1}webp)|(a[-\\s]{1})?webp[-\\s]{1}brightness)\\b",
+  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?(((the[-\\s]{1})?brightness[-\\s]{1}of[-\\s]{1}a[-\\s]{1}webp)|(a[-\\s]{1})?webp[-\\s]{1}brightness)\\b",
     "link": "https://webpconverter.app/brightness",
     "title": "Adjust WebP Brightness",
     "isRegex": true
   },
   {
-  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?((the[-\\s]{1}contrast[-\\s]{1}of[-\\s]{1}a[-\\s]{1}webp)|(a[-\\s]{1})?webp[-\\s]{1}contrast)\\b",
+  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?(((the[-\\s]{1})?contrast[-\\s]{1}of[-\\s]{1}a[-\\s]{1}webp)|(a[-\\s]{1})?webp[-\\s]{1}contrast)\\b",
   	"link": "https://webpconverter.app/contrast",
   	"title": "Adjust WebP Contrast",
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?((the[-\\s]{1}gamma[-\\s]{1}of[-\\s]{1}a[-\\s]{1}webp)|(a[-\\s]{1})?webp[-\\s]{1}gamma)\\b",
+  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?(((the[-\\s]{1})?gamma[-\\s]{1}of[-\\s]{1}a[-\\s]{1}webp)|(a[-\\s]{1})?webp[-\\s]{1}gamma)\\b",
   	"link": "https://webpconverter.app/gamma",
   	"title": "Adjust WebP Brightness",
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?((the[-\\s]{1}hue[-\\s]{1}of[-\\s]{1}a[-\\s]{1}webp)|(a[-\\s]{1})?webp[-\\s]{1}hue)\\b",
+  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?(((the[-\\s]{1})?hue[-\\s]{1}of[-\\s]{1}a[-\\s]{1}webp)|(a[-\\s]{1})?webp[-\\s]{1}hue)\\b",
   	"link": "https://webpconverter.app/hue",
   	"title": "Adjust WebP Hue",
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?((the[-\\s]{1}saturation[-\\s]{1}of[-\\s]{1}a[-\\s]{1}webp)|(a[-\\s]{1})?webp[-\\s]{1}saturation)\\b",
+  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?(((the[-\\s]{1})?saturation[-\\s]{1}of[-\\s]{1}a[-\\s]{1}webp)|(a[-\\s]{1})?webp[-\\s]{1}saturation)\\b",
   	"link": "https://webpconverter.app/saturation",
   	"title": "Adjust WebP Saturation",
   	"isRegex": true
