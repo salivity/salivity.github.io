@@ -108,7 +108,7 @@
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?(the)?webp[-\\s]{1}hue\\b",
+  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?((the[-\\s]{1}hue[-\\s]{1}of[-\\s]{1}a[-\\s]{1}webp)|(a[-\\s]{1})?webp[-\\s]{1}hue)\\b",
   	"link": "https://webpconverter.app/hue",
   	"title": "Adjust WebP Hue",
   	"isRegex": true
