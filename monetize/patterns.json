@@ -598,7 +598,12 @@
     "title": "URL Opener",
     "isRegex": true
   },
-  
+  {
+    "pattern": "\\b(unzip[p]?er)|(unzip([-\\s]a)?[-\\s]file[s]?)|((create|edit|read|manage|(un)?compress)[-\\s]([a][-\\s])?zip[-\\s](file|archive)[s]?)\\b",
+    "link": "https://unzipper.app",
+    "title": "Unzipper",
+    "isRegex": true
+  },
   {
     "pattern": "\\b((AI)?[\\s]?TTS|Text[-\\s]?to[-\\s]?Speech|Text[-\\s]?to[-\\s]?audio|(AI)?[\\s]?Voice Generat(or[s]?|ion[s]?))\\b",
     "link": "https://textreader.app",
