@@ -379,6 +379,61 @@
   	"title": "Apply Rotate Filter to PNG",
   	"isRegex": true
   },
+
+  {
+    "pattern": "\\b(wmv[-\\s]{1}to[-\\s]{1}[a]?png)\\b",
+    "link": "https://pngconverter.app/wmv-to-apng",
+    "title": "WMV to PNG Converter",
+    "isRegex": true
+  },
+    {
+    "pattern": "\\b(avi[-\\s]{1}to[-\\s]{1}[a]?png)\\b",
+    "link": "https://pngconverter.app/avi-to-apng",
+    "title": "AVI to PNG Converter",
+    "isRegex": true
+  },
+  {
+    "pattern": "\\b(flv[-\\s]{1}to[-\\s]{1}[a]?png)\\b",
+    "link": "https://pngconverter.app/flv-to-apng",
+    "title": "FLV to PNG Converter",
+    "isRegex": true
+  },
+  {
+    "pattern": "\\b(gif[-\\s]{1}to[-\\s]{1}[a]?png)\\b",
+    "link": "https://pngconverter.app/gif-to-apng",
+    "title": "GIF to PNG Converter",
+    "isRegex": true
+  },
+  {
+    "pattern": "\\b(mkv[-\\s]{1}to[-\\s]{1}[a]?png)\\b",
+    "link": "https://pngconverter.app/mkv-to-apng",
+    "title": "MKV to PNG Converter",
+    "isRegex": true
+  },
+  {
+    "pattern": "\\b(mov[-\\s]{1}to[-\\s]{1}[a]?png)\\b",
+    "link": "https://pngconverter.app/wmv-to-apng",
+    "title": "WMV to PNG Converter",
+    "isRegex": true
+  },
+  {
+    "pattern": "\\b(wmv[-\\s]{1}to[-\\s]{1}[a]?png)\\b",
+    "link": "https://pngconverter.app/mov-to-apng",
+    "title": "MOV to PNG Converter",
+    "isRegex": true
+  },
+  {
+    "pattern": "\\b((mp4|mpeg[-]?4)[-\\s]{1}to[-\\s]{1}[a]?png)\\b",
+    "link": "https://pngconverter.app/mp4-to-apng",
+    "title": "MP4 to PNG Converter",
+    "isRegex": true
+  },
+  {
+    "pattern": "\\b(webm[-\\s]{1}to[-\\s]{1}[a]?png)\\b",
+    "link": "https://pngconverter.app/webm-to-apng",
+    "title": "WebM to PNG Converter",
+    "isRegex": true
+  },
   {
     "pattern": "\\b((AVIF[\\s]?(Convert(er[s]?|ing)?|conversion[s]?))|((convert|image|jpeg|jpg|avif|gif|avif|avif)?[\\s]?to[-\\s]+avif))\\b",
     "link": "https://avifconverter.app",
