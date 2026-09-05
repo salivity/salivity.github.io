@@ -23,8 +23,16 @@ async function autoLinkArticles(jsonPath) {
     const configs = await response.json();
     const articles = document.querySelectorAll('article');
 
+    // Sort patterns by length descending so longer/more specific patterns
+    // claim text before shorter subsets can
+    const prioritizedConfigs = [...configs].sort((a, b) => {
+      const lenA = (a.pattern || '').length;
+      const lenB = (b.pattern || '').length;
+      return lenB - lenA;
+    });
+
     articles.forEach((article) => {
-      configs.forEach((item) => {
+      prioritizedConfigs.forEach((item) => {
         linkifyPatternInElement(article, item);
       });
     });
@@ -39,16 +47,15 @@ async function autoLinkArticles(jsonPath) {
  * @returns {RegExp}
  */
 function buildRegex({ pattern, isRegex = false, flags = 'gi', exactBoundary = true }) {
+  const safeFlags = flags.includes('g') ? flags : `${flags}g`;
+
   if (isRegex) {
-    // Ensure the 'g' flag is present for multi-match execution
-    const safeFlags = flags.includes('g') ? flags : `${flags}g`;
     return new RegExp(pattern, safeFlags);
   }
 
   // Fallback: literal string escaping with optional word boundaries
   const escaped = pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const source = exactBoundary ? `\\b(${escaped})\\b` : `(${escaped})`;
-  const safeFlags = flags.includes('g') ? flags : `${flags}g`;
 
   return new RegExp(source, safeFlags);
 }
@@ -75,6 +82,7 @@ function linkifyPatternInElement(rootElement, itemConfig) {
 
   const forbiddenSelector = 'a, script, style, textarea, input, button, code, pre';
 
+  // Fresh TreeWalker for each pattern to discover only remaining raw text nodes
   const walker = document.createTreeWalker(
     rootElement,
     NodeFilter.SHOW_TEXT,
@@ -113,49 +121,26 @@ function linkifyPatternInElement(rootElement, itemConfig) {
         continue;
       }
 
-      // 1. Slice preceding text
-      let prefixText = text.slice(lastIndex, match.index);
-
-      // Ensure a space exists before the anchor tag
+      // 1. Append preceding text unchanged
+      const prefixText = text.slice(lastIndex, match.index);
       if (prefixText.length > 0) {
-        if (!/\s$/.test(prefixText)) {
-          prefixText += ' ';
-        }
-      } else if (lastIndex === 0 && textNode.previousSibling) {
-        // Handle boundary if this match is at the very beginning of the text node
-        fragment.appendChild(document.createTextNode(' '));
-      }
-
-      if (prefixText) {
         fragment.appendChild(document.createTextNode(prefixText));
       }
 
-      // 2. Build the anchor element (trimming in case the regex captured whitespace)
+      // 2. Build the anchor element
       const anchor = document.createElement('a');
       anchor.href = link;
       if (target) anchor.target = target;
       if (rel) anchor.rel = rel;
       if (title) anchor.title = title;
-      anchor.textContent = match[0].trim();
+      anchor.textContent = match[0];
 
       fragment.appendChild(anchor);
-
-      // 3. Ensure a space exists after the anchor tag
-      const remainingSlice = text.slice(regex.lastIndex);
-      if (remainingSlice.length > 0) {
-        // If the immediate next character is not whitespace, prepend a space
-        if (!/^\s/.test(remainingSlice)) {
-          fragment.appendChild(document.createTextNode(' '));
-        }
-      } else if (!textNode.nextSibling) {
-        // Optional: appends trailing space if at end of text node
-        fragment.appendChild(document.createTextNode(' '));
-      }
 
       lastIndex = regex.lastIndex;
     }
 
-    // Append any trailing text after the last match
+    // 3. Append remaining text after the final match
     if (lastIndex < text.length) {
       fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
     }
