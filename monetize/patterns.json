@@ -128,28 +128,28 @@
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((apply)[- ]{1})?gr[ae]{1}y[- ]?scale[- ]{1}filter[- ]{1}((to|a)[- ]{1})?webp\\b",
+  	"pattern": "\\b((apply)[- ]{1})?gr[ae]{1}y[- ]?scale[- ]{1}(filter[- ]{1})?((to|a)[- ]{1})?webp\\b",
   	"link": "https://webpconverter.app/grayscale",
   	"title": "Apply Grayscale Filter to WebP",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[- ]{1})?mirror[- ]{1}filter[- ]{1}((to|a)[- ]{1})?webp\\b",
+  	"pattern": "\\b((apply)[- ]{1})?mirror[- ]{1}(filter[- ]{1})?((to|a)[- ]{1})?webp\\b",
   	"link": "https://webpconverter.app/mirror",
   	"title": "Apply Mirror Filter to WebP",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[- ]{1})?(negate|invert)[- ]{1}filter[- ]{1}((to|a)[- ]{1})?webp\\b",
+  	"pattern": "\\b((apply)[- ]{1})?(negate|invert)[- ]{1}(filter[- ]{1})?((to|a)[- ]{1})?webp\\b",
   	"link": "https://webpconverter.app/negate",
   	"title": "Apply Negate Filter to WebP",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[- ]{1})?normalize[- ]{1}filter[- ]{1}((to|a)[- ]{1})?webp\\b",
+  	"pattern": "\\b((apply)[- ]{1})?normalize[- ]{1}(filter[- ]{1})?((to|a)[- ]{1})?webp\\b",
   	"link": "https://webpconverter.app/normalize",
   	"title": "Apply Normalize Filter to WebP",
   	"isRegex": true
