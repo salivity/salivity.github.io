@@ -128,28 +128,28 @@
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?gr[ae]{1}y[-\\s]?scale[-\\s]{1}(filter[-\\s]{1})?((to|a|the)[-\\s]{1})?webp\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?gr[ae]{1}y[-\\s]?scale[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?webp\\b",
   	"link": "https://webpconverter.app/grayscale",
   	"title": "Apply Grayscale Filter to WebP",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?mirror[-\\s]{1}(filter[-\\s]{1})?((to|a|the)[-\\s]{1})?webp\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?mirror[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?webp\\b",
   	"link": "https://webpconverter.app/mirror",
   	"title": "Apply Mirror Filter to WebP",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?(negate|invert)[-\\s]{1}(filter[-\\s]{1})?((to|a|the)[-\\s]{1})?webp\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?(negate|invert)[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?webp\\b",
   	"link": "https://webpconverter.app/negate",
   	"title": "Apply Negate Filter to WebP",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?normalize[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?webp\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?normalize[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?webp\\b",
   	"link": "https://webpconverter.app/normalize",
   	"title": "Apply Normalize Filter to WebP",
   	"isRegex": true
@@ -163,67 +163,67 @@
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?sepia[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?webp\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?sepia[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?webp\\b",
   	"link": "https://webpconverter.app/sepia",
   	"title": "Apply Sepia Filter to WebP",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?sharpen[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?webp\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?sharpen[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?webp\\b",
   	"link": "https://webpconverter.app/sharpen",
   	"title": "Apply Sharpen Filter to WebP",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?watermark[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?webp\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?watermark[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?webp\\b",
   	"link": "https://webpconverter.app/watermark",
   	"title": "Apply Watermark to WebP",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?oil[-\\s]?paint[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?webp\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?oil[-\\s]?paint[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?webp\\b",
   	"link": "https://webpconverter.app/oil-paint",
   	"title": "Apply Oil Paint Filter to WebP",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?vignette[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?webp\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?vignette[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?webp\\b",
   	"link": "https://webpconverter.app/vignette",
   	"title": "Apply Vignette Filter to WebP",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?solarize[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?webp\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?solarize[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?webp\\b",
   	"link": "https://webpconverter.app/solarize",
   	"title": "Apply Solarize Filter to WebP",
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?wave[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?webp\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?wave[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?webp\\b",
   	"link": "https://webpconverter.app/wave",
   	"title": "Apply Wave Filter to WebP",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?threshold[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?webp\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?threshold[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?webp\\b",
   	"link": "https://webpconverter.app/threshold",
   	"title": "Apply Threshold Filter to WebP",
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?trim[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?webp\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?trim[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?webp\\b",
   	"link": "https://webpconverter.app/trim",
   	"title": "Apply Trim Filter to WebP",
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?rotate[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?webp\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?rotate[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?webp\\b",
   	"link": "https://webpconverter.app/rotate",
   	"title": "Apply Rotate Filter to WebP",
   	"isRegex": true
@@ -279,28 +279,28 @@
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?gr[ae]{1}y[-\\s]?scale[-\\s]{1}(filter[-\\s]{1})?((to|a|the)[-\\s]{1})?png\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?gr[ae]{1}y[-\\s]?scale[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?png\\b",
   	"link": "https://pngconverter.app/grayscale",
   	"title": "Apply Grayscale Filter to PNG",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?mirror[-\\s]{1}(filter[-\\s]{1})?((to|a|the)[-\\s]{1})?png\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?mirror[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?png\\b",
   	"link": "https://pngconverter.app/mirror",
   	"title": "Apply Mirror Filter to PNG",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?(negate|invert)[-\\s]{1}(filter[-\\s]{1})?((to|a|the)[-\\s]{1})?png\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?(negate|invert)[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?png\\b",
   	"link": "https://pngconverter.app/negate",
   	"title": "Apply Negate Filter to PNG",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?normalize[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?png\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?normalize[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?png\\b",
   	"link": "https://pngconverter.app/normalize",
   	"title": "Apply Normalize Filter to PNG",
   	"isRegex": true
@@ -314,67 +314,67 @@
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?sepia[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?png\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?sepia[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?png\\b",
   	"link": "https://pngconverter.app/sepia",
   	"title": "Apply Sepia Filter to PNG",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?sharpen[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?png\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?sharpen[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?png\\b",
   	"link": "https://pngconverter.app/sharpen",
   	"title": "Apply Sharpen Filter to PNG",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?watermark[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?png\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?watermark[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?png\\b",
   	"link": "https://pngconverter.app/watermark",
   	"title": "Apply Watermark to PNG",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?oil[-\\s]?paint[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?png\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?oil[-\\s]?paint[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?png\\b",
   	"link": "https://pngconverter.app/oil-paint",
   	"title": "Apply Oil Paint Filter to PNG",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?vignette[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?png\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?vignette[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?png\\b",
   	"link": "https://pngconverter.app/vignette",
   	"title": "Apply Vignette Filter to PNG",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?solarize[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?png\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?solarize[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?png\\b",
   	"link": "https://pngconverter.app/solarize",
   	"title": "Apply Solarize Filter to PNG",
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?wave[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?png\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?wave[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?png\\b",
   	"link": "https://pngconverter.app/wave",
   	"title": "Apply Wave Filter to PNG",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?threshold[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?png\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?threshold[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?png\\b",
   	"link": "https://pngconverter.app/threshold",
   	"title": "Apply Threshold Filter to PNG",
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?trim[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?png\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?trim[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?png\\b",
   	"link": "https://pngconverter.app/trim",
   	"title": "Apply Trim Filter to PNG",
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?rotate[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?png\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?rotate[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?png\\b",
   	"link": "https://pngconverter.app/rotate",
   	"title": "Apply Rotate Filter to PNG",
   	"isRegex": true
@@ -447,31 +447,31 @@
     "isRegex": true
   },
   {
-  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?(((the[-\\s]{1})?brightness[-\\s]{1}of[-\\s]{1}a[-\\s]{1}avif)|(a[-\\s]{1})?avif[-\\s]{1}brightness)\\b",
+  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?(((the[-\\s]{1})?brightness[-\\s]{1}of[-\\s]{1}(a|an[-\\s]){1}avif)|(a[-\\s]{1})?avif[-\\s]{1}brightness)\\b",
     "link": "https://avifconverter.app/brightness",
     "title": "Adjust AVIF Brightness",
     "isRegex": true
   },
   {
-  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?(((the[-\\s]{1})?contrast[-\\s]{1}of[-\\s]{1}a[-\\s]{1}avif)|(a[-\\s]{1})?avif[-\\s]{1}contrast)\\b",
+  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?(((the[-\\s]{1})?contrast[-\\s]{1}of[-\\s]{1}(a|an[-\\s]){1}avif)|(a[-\\s]{1})?avif[-\\s]{1}contrast)\\b",
   	"link": "https://avifconverter.app/contrast",
   	"title": "Adjust AVIF Contrast",
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?(((the[-\\s]{1})?gamma[-\\s]{1}of[-\\s]{1}a[-\\s]{1}avif)|(a[-\\s]{1})?avif[-\\s]{1}gamma)\\b",
+  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?(((the[-\\s]{1})?gamma[-\\s]{1}of[-\\s]{1}(a|an[-\\s]){1}avif)|(a[-\\s]{1})?avif[-\\s]{1}gamma)\\b",
   	"link": "https://avifconverter.app/gamma",
   	"title": "Adjust AVIF Brightness",
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?(((the[-\\s]{1})?hue[-\\s]{1}of[-\\s]{1}a[-\\s]{1}avif)|(a[-\\s]{1})?avif[-\\s]{1}hue)\\b",
+  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?(((the[-\\s]{1})?hue[-\\s]{1}of[-\\s]{1}(a|an[-\\s]{1})avif)|(a[-\\s]{1})?avif[-\\s]{1}hue)\\b",
   	"link": "https://avifconverter.app/hue",
   	"title": "Adjust AVIF Hue",
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?(((the[-\\s]{1})?saturation[-\\s]{1}of[-\\s]{1}a[-\\s]{1}avif)|(a[-\\s]{1})?avif[-\\s]{1}saturation)\\b",
+  	"pattern": "\\b((modify|adjust|change|alter|tweak)[-\\s]{1})?(((the[-\\s]{1})?saturation[-\\s]{1}of[-\\s]{1}(a|an[-\\s]{1})avif)|(a[-\\s]{1})?avif[-\\s]{1}saturation)\\b",
   	"link": "https://avifconverter.app/saturation",
   	"title": "Adjust AVIF Saturation",
   	"isRegex": true
@@ -479,108 +479,108 @@
   
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?gaussian[-\\s]{1}blur[-\\s]{1}((to(the|a)?|a)[-\\s]{1})?avif\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?gaussian[-\\s]{1}blur[-\\s]{1}((to(the|a|an)?|a)[-\\s]{1})?avif\\b",
   	"link": "https://avifconverter.app/gaussian-blur",
   	"title": "Apply Gaussian Blur to AVIF",
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?gr[ae]{1}y[-\\s]?scale[-\\s]{1}(filter[-\\s]{1})?((to|a|the)[-\\s]{1})?avif\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?gr[ae]{1}y[-\\s]?scale[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?avif\\b",
   	"link": "https://avifconverter.app/grayscale",
   	"title": "Apply Grayscale Filter to AVIF",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?mirror[-\\s]{1}(filter[-\\s]{1})?((to|a|the)[-\\s]{1})?avif\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?mirror[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?avif\\b",
   	"link": "https://avifconverter.app/mirror",
   	"title": "Apply Mirror Filter to AVIF",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?(negate|invert)[-\\s]{1}(filter[-\\s]{1})?((to|a|the)[-\\s]{1})?avif\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?(negate|invert)[-\\s]{1}(filter[-\\s]{1})?((to|a|the|an)[-\\s]{1})?avif\\b",
   	"link": "https://avifconverter.app/negate",
   	"title": "Apply Negate Filter to AVIF",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?normalize[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?avif\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?normalize[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the|an)[-\\s]{1})?avif\\b",
   	"link": "https://avifconverter.app/normalize",
   	"title": "Apply Normalize Filter to AVIF",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b(resize|upscale|downscale)[-\\s]{1}((a|the|to)[-\\s]{1})?avif([-\\s]image[s]?)?\\b",
+  	"pattern": "\\b(resize|upscale|downscale)[-\\s]{1}((a|the|to|an)[-\\s]{1})?avif([-\\s]image[s]?)?\\b",
   	"link": "https://avifconverter.app/resize",
   	"title": "Resize AVIF Images",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?sepia[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?avif\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?sepia[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the|an)[-\\s]{1})?avif\\b",
   	"link": "https://avifconverter.app/sepia",
   	"title": "Apply Sepia Filter to AVIF",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?sharpen[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?avif\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?sharpen[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the|an)[-\\s]{1})?avif\\b",
   	"link": "https://avifconverter.app/sharpen",
   	"title": "Apply Sharpen Filter to AVIF",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?watermark[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?avif\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?watermark[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the|an)[-\\s]{1})?avif\\b",
   	"link": "https://avifconverter.app/watermark",
   	"title": "Apply Watermark to AVIF",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?oil[-\\s]?paint[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?avif\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?oil[-\\s]?paint[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the|an)[-\\s]{1})?avif\\b",
   	"link": "https://avifconverter.app/oil-paint",
   	"title": "Apply Oil Paint Filter to AVIF",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?vignette[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?avif\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?vignette[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the|an)[-\\s]{1})?avif\\b",
   	"link": "https://avifconverter.app/vignette",
   	"title": "Apply Vignette Filter to AVIF",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?solarize[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?avif\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?solarize[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the|an)[-\\s]{1})?avif\\b",
   	"link": "https://avifconverter.app/solarize",
   	"title": "Apply Solarize Filter to AVIF",
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?wave[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?avif\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?wave[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the|an)[-\\s]{1})?avif\\b",
   	"link": "https://avifconverter.app/wave",
   	"title": "Apply Wave Filter to AVIF",
   	"isRegex": true
   },
   
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?threshold[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?avif\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?threshold[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the|an)[-\\s]{1})?avif\\b",
   	"link": "https://avifconverter.app/threshold",
   	"title": "Apply Threshold Filter to AVIF",
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?trim[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?avif\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?trim[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the|an)[-\\s]{1})?avif\\b",
   	"link": "https://avifconverter.app/trim",
   	"title": "Apply Trim Filter to AVIF",
   	"isRegex": true
   },
   {
-  	"pattern": "\\b((apply)[-\\s]{1})?rotate[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the)[-\\s]{1})?avif\\b",
+  	"pattern": "\\b((apply)[-\\s]{1})?rotate[-\\s]{1}(filter[-\\s]{1})?((to(the)?|a|the|an)[-\\s]{1})?avif\\b",
   	"link": "https://avifconverter.app/rotate",
   	"title": "Apply Rotate Filter to AVIF",
   	"isRegex": true
