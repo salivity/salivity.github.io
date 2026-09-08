@@ -192,6 +192,15 @@
    <sitemap>
       <loc>https://salivity.github.io/gpu.js/sitemap.xml</loc>
    </sitemap>  
+   <sitemap>
+      <loc>https://salivity.github.io/matter.js/sitemap.xml</loc>
+   </sitemap>  
+   <sitemap>
+      <loc>https://salivity.github.io/lodash/sitemap.xml</loc>
+   </sitemap>  
+   <sitemap>
+      <loc>https://salivity.github.io/linux/sitemap.xml</loc>
+   </sitemap>  
       
    <sitemap>
       <loc>https://salivity.github.io/heic-to-jpeg/sitemap.xml</loc>
