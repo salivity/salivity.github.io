@@ -5,6 +5,8 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  console.info("Monetize Script: Loaded");
+
   autoLinkArticles('/monetize/patterns.json');
 });
 
