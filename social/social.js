@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.info("Social Network Script Loaded");
+    console.info("Social Network Script: Loaded");
     
     const social_links = [ 
         {
