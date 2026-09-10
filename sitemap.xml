@@ -234,6 +234,9 @@
    <sitemap>
       <loc>https://salivity.github.io/dvi/sitemap.xml</loc>
    </sitemap>  
+   <sitemap>
+      <loc>https://salivity.github.io/vga/sitemap.xml</loc>
+   </sitemap>  
       
    <sitemap>
       <loc>https://salivity.github.io/heic-to-jpeg/sitemap.xml</loc>
