@@ -1,11 +1,5 @@
 [
   {
-    "pattern": "\\b(Data[-\\s]?URL[s]?)\\b",
-    "link": "https://dataurl.link",
-    "title": "Data URL Generator",
-    "isRegex": true
-  },
-  {
     "pattern": "\\b(WebM[-\\s]?(Convert(er[s]?)?|Conversion))\\b",
     "link": "https://webmconverter.app",
     "title": "WebM Converter",
