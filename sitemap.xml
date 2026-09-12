@@ -236,6 +236,9 @@
    </sitemap>  
    <sitemap>
       <loc>https://salivity.github.io/vga/sitemap.xml</loc>
+   </sitemap>     
+   <sitemap>
+      <loc>https://salivity.github.io/cpp/sitemap.xml</loc>
    </sitemap>  
       
    <sitemap>
