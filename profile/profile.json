@@ -1,6 +1,12 @@
 {
 	"name": "David Clews",
 	"email": "developer@smvc.dev",
-	"country": "england",
-	"biography": "Computer Programmer"
+	"country": "England",
+	"biography": "Computer Programmer",
+	"links": [
+		{
+			"label": "WebMConverter.app",
+			"url": "https://webmconverter.app"
+		},
+	]
 }
