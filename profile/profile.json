@@ -4,38 +4,43 @@
 	"phone": "+44 7395 843046",
 	"country": "England",
 	"biography": "Computer Programmer",
-	"links": [
+	"link_groups": [
 		{
-			"label": "WebMConverter.app",
-			"url": "https://webmconverter.app"
-		},
-		{
-			"label": "TextReader.app",
-			"url": "https://textreader.app"
-		},
-		{
-			"label": "WebPConverter.app",
-			"url": "https://webpconverter.app"
-		},
-		{
-			"label": "AVIFConverter.app",
-			"url": "https://avifconverter.app"
-		},
-		{
-			"label": "ImageDownloader.website",
-			"url": "https://imagedownloader.website"
-		},
-		{
-			"label": "PNGConverter.app",
-			"url": "https://pngconverter.app"
-		},
-		{
-			"label": "URLOpener.link",
-			"url": "https://urlopener.link"
-		},
-		{
-			"label": "Unzipper.app",
-			"url": "https://unzipper.app"
+			"title": "Projects",
+			"links": [
+				{
+					"label": "WebMConverter.app",
+					"url": "https://webmconverter.app"
+				},
+				{
+					"label": "TextReader.app",
+					"url": "https://textreader.app"
+				},
+				{
+					"label": "WebPConverter.app",
+					"url": "https://webpconverter.app"
+				},
+				{
+					"label": "AVIFConverter.app",
+					"url": "https://avifconverter.app"
+				},
+				{
+					"label": "ImageDownloader.website",
+					"url": "https://imagedownloader.website"
+				},
+				{
+					"label": "PNGConverter.app",
+					"url": "https://pngconverter.app"
+				},
+				{
+					"label": "URLOpener.link",
+					"url": "https://urlopener.link"
+				},
+				{
+					"label": "Unzipper.app",
+					"url": "https://unzipper.app"
+				}
+			]
 		}
 	]
 }
