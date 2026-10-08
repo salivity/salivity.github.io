@@ -294,6 +294,9 @@
    <sitemap>
       <loc>https://salivity.github.io/webgl/sitemap.xml</loc>
    </sitemap>  
+   <sitemap>
+      <loc>https://salivity.github.io/unrar/sitemap.xml</loc>
+   </sitemap>  
       
    <sitemap>
       <loc>https://salivity.github.io/heic-to-jpeg/sitemap.xml</loc>
