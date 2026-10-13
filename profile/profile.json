@@ -9,35 +9,43 @@
 			"title": "Projects",
 			"links": [
 				{
-					"label": "WebMConverter.app - Convert your Audio/Video Files to WebM",
+					"title": "Convert your Audio/Video Files to WebM",
+					"label": "WebMConverter.app",
 					"url": "https://webmconverter.app"
 				},
 				{
-					"label": "TextReader.app - Free AI Text to Speech Voice Generator",
+					"title": "Free AI Text to Speech Voice Generator",
+					"label": "TextReader.app",
 					"url": "https://textreader.app"
 				},
 				{
-					"label": "WebPConverter.app - Convert your Image files to WebP",
+					"title": "Convert your Image files to WebP",
+					"label": "WebPConverter.app",
 					"url": "https://webpconverter.app"
 				},
 				{
-					"label": "AVIFConverter.app - Convert your Image files to AVIF",
+					"title": "Convert your Image files to AVIF",
+					"label": "AVIFConverter.app",
 					"url": "https://avifconverter.app"
 				},
 				{
-					"label": "ImageDownloader.website - Download all your images from a single URL link",
+					"title": "Download all your images from a single URL link",
+					"label": "ImageDownloader.website",
 					"url": "https://imagedownloader.website"
 				},
 				{
-					"label": "PNGConverter.app - Convert your Image/Video to PNG",
+					"title": "Convert your Image/Video to PNG",
+					"label": "PNGConverter.app",
 					"url": "https://pngconverter.app"
 				},
 				{
-					"label": "URLOpener.link - Bulk open URL links",
+					"title": "Bulk open URL links",
+					"label": "URLOpener.link",
 					"url": "https://urlopener.link"
 				},
 				{
-					"label": "Unzipper.app - Create, Edit and Manage your Zip Archives",
+					"title": "Create, Edit and Manage your Zip Archives",
+					"label": "Unzipper.app",
 					"url": "https://unzipper.app"
 				}
 			]
