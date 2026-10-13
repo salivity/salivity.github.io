@@ -9,35 +9,35 @@
 			"title": "Projects",
 			"links": [
 				{
-					"label": "WebMConverter.app",
+					"label": "WebMConverter.app - Convert your Audio/Video Files to WebM",
 					"url": "https://webmconverter.app"
 				},
 				{
-					"label": "TextReader.app",
+					"label": "TextReader.app - Free AI Text to Speech Voice Generator",
 					"url": "https://textreader.app"
 				},
 				{
-					"label": "WebPConverter.app",
+					"label": "WebPConverter.app - Convert your Image files to WebP",
 					"url": "https://webpconverter.app"
 				},
 				{
-					"label": "AVIFConverter.app",
+					"label": "AVIFConverter.app - Convert your Image files to AVIF",
 					"url": "https://avifconverter.app"
 				},
 				{
-					"label": "ImageDownloader.website",
+					"label": "ImageDownloader.website - Download all your images from a single URL link",
 					"url": "https://imagedownloader.website"
 				},
 				{
-					"label": "PNGConverter.app",
+					"label": "PNGConverter.app - Convert your Image/Video to PNG",
 					"url": "https://pngconverter.app"
 				},
 				{
-					"label": "URLOpener.link",
+					"label": "URLOpener.link - Bulk open URL links",
 					"url": "https://urlopener.link"
 				},
 				{
-					"label": "Unzipper.app",
+					"label": "Unzipper.app - Create, Edit and Manage your Zip Archives",
 					"url": "https://unzipper.app"
 				}
 			]
