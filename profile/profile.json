@@ -8,42 +8,42 @@
 			"links": [
 				{
 					"title": "Convert your Image/Audio/Video Files to WebM",
-					"label": "WebMConverter.app",
+					"label": "WebM Converter",
 					"url": "https://webmconverter.app"
 				},
 				{
 					"title": "Free AI Text to Speech Voice Generator",
-					"label": "TextReader.app",
+					"label": "Text Reader",
 					"url": "https://textreader.app"
 				},
 				{
 					"title": "Convert your Image files to WebP",
-					"label": "WebPConverter.app",
+					"label": "WebP Converter",
 					"url": "https://webpconverter.app"
 				},
 				{
 					"title": "Convert your Image files to AVIF",
-					"label": "AVIFConverter.app",
+					"label": "AVIF Converter",
 					"url": "https://avifconverter.app"
 				},
 				{
 					"title": "Download all your images from a single URL link",
-					"label": "ImageDownloader.website",
+					"label": "Image Downloader",
 					"url": "https://imagedownloader.website"
 				},
 				{
 					"title": "Convert your Image/Video to PNG",
-					"label": "PNGConverter.app",
+					"label": "PNG Converter",
 					"url": "https://pngconverter.app"
 				},
 				{
 					"title": "Bulk open URL links",
-					"label": "URLOpener.link",
+					"label": "URL Opener",
 					"url": "https://urlopener.link"
 				},
 				{
 					"title": "Create, Edit and Manage your Zip Archives",
-					"label": "Unzipper.app",
+					"label": "Unzipper",
 					"url": "https://unzipper.app"
 				}
 			]
