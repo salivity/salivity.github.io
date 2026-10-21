@@ -321,6 +321,21 @@
    <sitemap>
       <loc>https://salivity.github.io/ui/sitemap.xml</loc>
    </sitemap>  
+   <sitemap>
+      <loc>https://salivity.github.io/paint.net/sitemap.xml</loc>
+   </sitemap>  
+   <sitemap>
+      <loc>https://salivity.github.io/uefi/sitemap.xml</loc>
+   </sitemap>  
+   <sitemap>
+      <loc>https://salivity.github.io/krita/sitemap.xml</loc>
+   </sitemap>  
+   <sitemap>
+      <loc>https://salivity.github.io/fontforge/sitemap.xml</loc>
+   </sitemap>  
+   <sitemap>
+      <loc>https://salivity.github.io/cs/sitemap.xml</loc>
+   </sitemap>  
       
    <sitemap>
       <loc>https://salivity.github.io/heic-to-jpeg/sitemap.xml</loc>
