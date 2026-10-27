@@ -45,7 +45,12 @@
 					"title": "Create, Edit and Manage your Zip Archives",
 					"label": "Unzipper",
 					"url": "https://unzipper.app"
-				}
+				},
+				{
+					"title": "Play Maggots a Worms 1995 Clone Online for FREE.",
+					"label": "Maggots",
+					"url": "https://maggots.vercel.app"
+				},
 			]
 		}
 	]
