@@ -55,6 +55,11 @@
 					"title": "Grawitell is a retro vector space shooter inspired by Commodore 64 Thrust.",
 					"label": "Grawitell",
 					"url": "https://grawitell.vercel.app/"
+				},
+				{
+					"title": "A neon arcade puzzle game inspired by Tetris",
+					"label": "Rectrix",
+					"url": "https://rectrix.vercel.app/"
 				}
 			]
 		}
