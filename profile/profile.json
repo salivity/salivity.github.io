@@ -50,6 +50,11 @@
 					"title": "Play Maggots a Worms 1995 Clone Online for FREE.",
 					"label": "Maggots",
 					"url": "https://maggots.vercel.app"
+				},
+				{
+					"title": "Grawitell is a retro vector space shooter inspired by Commodore 64 Thrust.",
+					"label": "Grawitell",
+					"url": "https://grawitell.vercel.app/"
 				}
 			]
 		}
