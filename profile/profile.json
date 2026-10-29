@@ -60,6 +60,11 @@
 					"title": "A neon arcade puzzle game inspired by Tetris",
 					"label": "Rectrix",
 					"url": "https://rectrix.vercel.app/"
+				},
+				{
+					"title": "High-octane retro vector zero-gravity arcade racer with Newtonian drift physics",
+					"label": "0G-Racer",
+					"url": "https://0g-racer.vercel.app/"
 				}
 			]
 		}
