@@ -65,6 +65,11 @@
 					"title": "High-octane retro vector zero-gravity arcade racer with Newtonian drift physics",
 					"label": "0G-Racer",
 					"url": "https://0g-racer.vercel.app/"
+				},
+				{
+					"title": "Interactive online slideshow video generator, supports WebM and MP4 Outputs",
+					"label": "Slidefactor",
+					"url": "https://slidefactor.vercel.app/"
 				}
 			]
 		}
