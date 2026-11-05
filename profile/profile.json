@@ -75,6 +75,11 @@
 					"title": "Classic Gem Breaking Game",
 					"label": "GemBreaker",
 					"url": "https://gembreaker.vercel.app/"
+				},
+				{
+					"title": "Classic Arkanoid Style Block Breaking Game",
+					"label": "BlockBreak",
+					"url": "https://izate.gitlab.io/blockbreak"
 				}
 			]
 		}
