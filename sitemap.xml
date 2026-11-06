@@ -345,6 +345,12 @@
    <sitemap>
       <loc>https://salivity.github.io/benchmark/sitemap.xml</loc>
    </sitemap>  
+   <sitemap>
+      <loc>https://salivity.github.io/firefox/sitemap.xml</loc>
+   </sitemap>  
+   <sitemap>
+      <loc>https://salivity.github.io/chromium/sitemap.xml</loc>
+   </sitemap>  
       
    <sitemap>
       <loc>https://salivity.github.io/heic-to-jpeg/sitemap.xml</loc>
