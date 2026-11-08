@@ -4,7 +4,7 @@
 	"biography": "Every bug you solve proves you can bring order to chaos.",
 	"link_groups": [
 		{
-			"title": "Projects",
+			"title": "Applications",
 			"links": [
 				{
 					"title": "Convert your Image/Audio/Video Files to WebM",
@@ -47,6 +47,16 @@
 					"url": "https://unzipper.app"
 				},
 				{
+					"title": "Interactive online slideshow video generator, supports WebM and MP4 Outputs",
+					"label": "Slidefactor",
+					"url": "https://slidefactor.vercel.app/"
+				}
+			]
+		}, 
+		{
+			"title": "Games",
+			"links": [
+				{
 					"title": "Play Maggots a Worms 1995 Clone Online for FREE.",
 					"label": "Maggots",
 					"url": "https://maggots.vercel.app"
@@ -67,11 +77,6 @@
 					"url": "https://0g-racer.vercel.app/"
 				},
 				{
-					"title": "Interactive online slideshow video generator, supports WebM and MP4 Outputs",
-					"label": "Slidefactor",
-					"url": "https://slidefactor.vercel.app/"
-				},
-				{
 					"title": "Classic Gem Breaking Game",
 					"label": "GemBreaker",
 					"url": "https://gembreaker.vercel.app/"
@@ -81,6 +86,7 @@
 					"label": "BlockBreak",
 					"url": "https://izate.gitlab.io/blockbreak"
 				}
+				
 			]
 		}
 	]
