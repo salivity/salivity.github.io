@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # slow down the search engine index speed
-crawl-delay: 5
+# crawl-delay: 5
 
 # global sitemap entry point for all pages projects on this github account
 Sitemap: https://salivity.github.io/sitemap.xml
