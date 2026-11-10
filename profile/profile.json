@@ -50,6 +50,11 @@
 					"title": "Interactive online slideshow video generator, supports WebM and MP4 Outputs",
 					"label": "Slidefactor",
 					"url": "https://slidefactor.vercel.app/"
+				},
+				{
+					"title": "Transfer the style of an image using AI.",
+					"label": "Neural Style Transfer Studio",
+					"url": "https://neural-style-transfer-studio.vercel.app/"
 				}
 			]
 		}, 
