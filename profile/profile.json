@@ -62,6 +62,11 @@
 					"url": "https://maggots.vercel.app"
 				},
 				{
+					"title": "Play this Neon Vector Tower Defense Game.",
+					"label": "Vector Frame",
+					"url": "https://vectorframe.vercel.app"
+				},
+				{
 					"title": "Grawitell is a retro vector space shooter inspired by Commodore 64 Thrust.",
 					"label": "Grawitell",
 					"url": "https://grawitell.vercel.app/"
