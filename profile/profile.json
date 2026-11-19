@@ -62,6 +62,11 @@
 			"title": "Games",
 			"links": [
 				{
+					"title": "Play VecTail a Geometry Dash Clone",
+					"label": "VecTail",
+					"url": "https://vectail.vercel.app"
+				},
+				{
 					"title": "Play Maggots a Worms 1995 Clone Online for FREE.",
 					"label": "Maggots",
 					"url": "https://maggots.vercel.app"
