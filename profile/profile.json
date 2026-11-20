@@ -62,6 +62,11 @@
 			"title": "Games",
 			"links": [
 				{
+					"title": "Play Crash And Smash a Destruction Derby Clone",
+					"label": "Crash And Smash",
+					"url": "https://crash-and-smash.vercel.app/"
+				},
+				{
 					"title": "Play VecWar a Geometry Wars Clone",
 					"label": "VecWar",
 					"url": "https://vecwar.vercel.app"
