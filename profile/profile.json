@@ -55,6 +55,11 @@
 					"title": "Transfer the style of an image using AI.",
 					"label": "Neural Style Transfer Studio",
 					"url": "https://neural-style-transfer-studio.vercel.app/"
+				},
+				{
+					"title": "Generate 3d static and animated typography",
+					"label": "Type Maker",
+					"url": "https://typemaker.vercel.app"
 				}
 			]
 		}, 
